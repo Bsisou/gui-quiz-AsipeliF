@@ -10,11 +10,10 @@ class Startpage:
         self.heading.place(x=170, y=150)   
         self.entry_username=Entry(game)
         self.entry_username.place(x=160, y=200)
-        #btn = Button(game,text="Continue")
-        #btn.pack(side = 'top')
-        #btn.place(x=200, y=250)
-
-        
+        btn = Button(game,text="Continue")
+        btn.pack(side = 'top')
+        btn.place(x=200, y=250)
+       
 #main game window
 game = Tk() 
 game.title("Games")
