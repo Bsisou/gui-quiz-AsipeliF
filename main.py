@@ -13,6 +13,11 @@ class Startpage:
         btn = Button(game,text="Continue")
         btn.pack(side = 'top')
         btn.place(x=200, y=250)
+
+def continue_button(self):
+    self.username = self.entry_username.get()
+    self.game.destroy()
+
        
 #main game window
 game = Tk() 
