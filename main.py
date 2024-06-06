@@ -18,6 +18,13 @@ class Startpage:
     def continue_button(self):
         self.username = self.entry_username.get()
         game.destroy()
+
+class Questpage:
+    def __init__(self, game1):
+        self.heading=Label(game1, text="What games is this", font="arial", fg="white", bg="black")
+
+
+
        
 #main game window
 game = Tk() 
@@ -26,6 +33,11 @@ game.geometry("500x500")
 bg = PhotoImage(file="Game.png")
 bglabel=Label(game, image=bg)
 bglabel.place(x=0, y=0)
+
+#Question game window
+game1 = Tk()
+game1.title("Question")
+
 #creating the frames
 Startpage(game)
 game.mainloop()
