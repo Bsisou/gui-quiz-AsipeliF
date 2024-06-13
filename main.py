@@ -1,6 +1,21 @@
 from tkinter import *
 from PIL import Image, ImageTk
 
+name_list = []
+global question_answers
+asked = []
+
+question_answers = {
+    1:['Modern Warfare 3', 'Call of Duty', 'Fortnite', 'Apex Legends',3]
+}
+
+#Picks a random question
+def randomioser():
+    global qnum
+    qnum = random.radiant(1,4)
+    if qnum not in asked:
+        asked.appen(qnum)
+
 #This class is the mainpage
 class Startpage:
     def __init__(self, game):
@@ -20,32 +35,32 @@ class Startpage:
     def continue_button(self):
         self.username = self.entry_username.get()
         game.destroy()
-
-#This class is the quiz page
-class Questpage:
-    def __init__(self, game1):
-        self.heading=Label(game1, text="What games is this", font="arial", fg="white", bg="black")
-        self.heading.place(x=170, y=150)
         
 #main game window
 game = Tk() 
 game.title("Games")
 game.geometry("500x500")
+#Adding the background image
 bg = PhotoImage(file="Game.png")
 bglabel=Label(game, image=bg)
 bglabel.place(x=0, y=0)
 Startpage(game)
 game.mainloop()
 
-Class
+class Quizpage:
+    def __init__(self, game1):
+        self.heading=Label(game1, text="Quiz", font="arial", fg="white", bg="black")
+        self.heading.place(x=200, y=200)
 
 #Question game window
 game1 = Tk()
 game1.title("Question")
 game1.geometry("500x500")
+#Adding the background image
 bg1 = PhotoImage(file="Game(1).png")
 bglabel1=Label(game1, image=bg1)
 bglabel1.place(x=0, y=0)
+Quizpage(game1)
 #creating the frames
 game1.mainloop()
    
